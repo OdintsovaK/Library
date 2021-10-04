@@ -5,6 +5,13 @@
  */
 package myClasses;
 
+import entity.Reader;
+import entity.Book;
+import entity.Author;
+import entity.History;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 /**
  *
  * @author pupil
@@ -54,11 +61,30 @@ public class Application {
         book2.setPublishedYear(2006);
         
         
+        
+        
         //READER
         Reader reader1 = new Reader();
         reader1.setFirstname("Ivan");
         reader1.setLastname("Ivanov");
         reader1.setPhone("55933888");
+        
+        
+        //History
+       History history1 = new History();
+       history1.setBook(book1);
+       history1.setReader (reader1);
+       
+       Calendar c = new GregorianCalendar();
+       
+       //Given Date
+       history1.setGivenDate(c.getTime());
+       System.out.println("history1 - " + history1.toString());
+       System.out.println("_________");
+       
+       //Return Date
+       history1.setReturnDate(c.getTime());
+       System.out.println("history1 - " + history1.toString());
     }
     
 }

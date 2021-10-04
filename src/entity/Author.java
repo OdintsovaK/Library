@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package myClasses;
+package entity;
 
 /**
  *
@@ -58,6 +58,17 @@ public class Author {
 
     public void setDay(int day) {
         this.day = day;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" 
+                + "name=" + name 
+                + ", lastname=" + lastname 
+                + ", year=" + year 
+                + ", month=" + month 
+                + ", day=" + day 
+                + '}';
     }
     
     
